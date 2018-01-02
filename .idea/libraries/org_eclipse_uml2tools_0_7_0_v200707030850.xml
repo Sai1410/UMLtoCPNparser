@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.eclipse:uml2tools:0.7.0-v200707030850" type="repository">
+    <properties maven-id="org.eclipse:uml2tools:0.7.0-v200707030850" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/uml2tools-0.7.0-v200707030850.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
