@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parser/CPN/XMLCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parser/UML/UMLReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parser/UML/ValueExtractor.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/ClassType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/OperationType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/PropertyType.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parser/ClassType.java" afterPath="$PROJECT_DIR$/src/parser/Entities/ClassType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parser/OperationType.java" afterPath="$PROJECT_DIR$/src/parser/Entities/OperationType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/parser/PropertyType.java" afterPath="$PROJECT_DIR$/src/parser/Entities/PropertyType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/MainController.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/MainController.java" afterPath="$PROJECT_DIR$/src/parser/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/XMLCreator.java" afterPath="$PROJECT_DIR$/src/parser/CPN/XMLCreator.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,9 +90,11 @@
       <file leaf-file-name="XMLCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/XMLCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="435">
+              <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -804,12 +795,12 @@
       <workItem from="1514899144671" duration="5176000" />
       <workItem from="1514976535769" duration="9719000" />
       <workItem from="1514994349732" duration="3484000" />
-      <workItem from="1515058624700" duration="10303000" />
+      <workItem from="1515058624700" duration="10783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29984000" />
+    <option name="totallyTimeSpent" value="30464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-277" width="1920" height="1097" extended-state="6" />
@@ -1205,9 +1196,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/CPN/XMLCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="435">
+          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
