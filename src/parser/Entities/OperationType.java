@@ -1,4 +1,4 @@
-package parser;
+package parser.Entities;
 
 public class OperationType {
     private String name;

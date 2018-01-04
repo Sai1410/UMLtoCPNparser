@@ -1,4 +1,4 @@
-package parser;
+package parser.Entities;
 
 import java.util.ArrayList;
 import java.util.List;
