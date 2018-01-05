@@ -5,6 +5,8 @@ public class ValueExtractor {
     private static String prefixSeparator = "::";
     private static String typeSeparator = "#";
     private static String typeEndSequence = ")";
+    private static String dirSeparator = "/";
+    private static String umlExtension = ".uml";
 
     public static String getTruncatedName(Object object) {
         String objectName = object.toString();
@@ -26,5 +28,14 @@ public class ValueExtractor {
             objectType = objectType.substring(objectType.lastIndexOf(typeSeparator)+typeSeparator.length(),objectType.lastIndexOf(typeEndSequence));
         }
         return objectType;
+    }
+
+    public static String extractFileName(String path){
+        String fileName = "newNet";
+        System.out.println(path);
+        if (path.contains(dirSeparator) && path.contains(umlExtension)){
+            fileName = path.substring(path.lastIndexOf(dirSeparator), path.lastIndexOf(umlExtension));
+        }
+        return fileName;
     }
 }

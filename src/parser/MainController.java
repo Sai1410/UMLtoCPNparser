@@ -8,8 +8,10 @@ import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import parser.CPN.XMLCreator;
 import parser.Entities.ClassType;
 import parser.UML.UMLReader;
+import parser.UML.ValueExtractor;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class MainController {
     @FXML private Text outputPathText;
 
     private List<ClassType> classList = new ArrayList<>();
+    private XMLCreator creator = new XMLCreator();
 
     @FXML protected void handleUMLChoose(ActionEvent event){
         FileChooser fileChooser = new FileChooser();
@@ -34,6 +37,8 @@ public class MainController {
         FileChooser.ExtensionFilter extFilter =
                 new FileChooser.ExtensionFilter("UML files (*.uml)", "*.uml");
         fileChooser.getExtensionFilters().add(extFilter);
+
+        //Open file chooser window
         File file = fileChooser.showOpenDialog(stage);
         if (file != null) {
             umlPath = file.getAbsolutePath();
@@ -60,12 +65,14 @@ public class MainController {
             alert.setContentText("UML filer or output directory not specified");
             alert.showAndWait();
         } else {
-            loadUML();
+            creator.convertUMLtoCPN(classList);
+            creator.saveXML(outputPath, ValueExtractor.extractFileName(umlPath));
         }
     }
 
     private void loadUML(){
         UMLReader reader = new UMLReader(umlPath);
+        classList = reader.getClassList();
     }
 
     void setStage(Stage stage){
