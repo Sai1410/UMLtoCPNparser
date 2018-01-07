@@ -18,7 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("mainView.fxml"));
         Parent root = loader.load();
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("UML to CPN parser");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
         MainController controller = (MainController) loader.getController();

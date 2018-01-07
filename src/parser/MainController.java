@@ -65,7 +65,7 @@ public class MainController {
             alert.setContentText("UML filer or output directory not specified");
             alert.showAndWait();
         } else {
-            creator.convertUMLtoCPN(classList);
+            creator.injectUMLData(classList);
             creator.saveXML(outputPath, ValueExtractor.extractFileName(umlPath));
         }
     }
