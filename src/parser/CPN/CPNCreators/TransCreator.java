@@ -39,6 +39,20 @@ public class TransCreator {
 
         trans = addBasicFields(trans,document,new AttributeType(AttributeType.Types.TRANS,transPositions));
 
+        Element text = document.createElement("text");
+        text.appendChild(document.createTextNode(operationType.getName()));
+        trans.appendChild(text);
+
+        Element box = document.createElement("box");
+        box.setAttribute("w","60.000000");
+        box.setAttribute("h","40.000000");
+        trans.appendChild(box);
+
+        Element binding = document.createElement("binding");
+        binding.setAttribute("x","7.20000");
+        binding.setAttribute("y","-3.00000");
+        trans.appendChild(binding);
+
         Element cond = document.createElement(COND_TAG);
         cond.setAttribute("id", IdCreator.getInstance().getNewId());
         cond = addBasicFields(cond,document,new AttributeType(AttributeType.Types.COND, transPositions));
@@ -64,25 +78,25 @@ public class TransCreator {
 
     private Element addBasicFields(Element trans, Document document, AttributeType attributeType){
         Element posattr = document.createElement("posattr");
-        for (AttributeType.Attribute attribute : attributeType.posAtrributes) {
+        for (AttributeType.Attribute attribute : attributeType.getPosAtrributes()) {
             posattr.setAttribute(attribute.attrName,attribute.value);
         }
         trans.appendChild(posattr);
 
         Element fillattr = document.createElement("fillattr");
-        for (AttributeType.Attribute attribute : attributeType.fillAtrributes) {
+        for (AttributeType.Attribute attribute : attributeType.getFillAtrributes()) {
             fillattr.setAttribute(attribute.attrName,attribute.value);
         }
         trans.appendChild(fillattr);
 
         Element lineattr = document.createElement("lineattr");
-        for (AttributeType.Attribute attribute : attributeType.lineAtrributes) {
+        for (AttributeType.Attribute attribute : attributeType.getLineAtrributes()) {
             lineattr.setAttribute(attribute.attrName,attribute.value);
         }
         trans.appendChild(lineattr);
 
         Element textattr = document.createElement("textattr");
-        for (AttributeType.Attribute attribute : attributeType.textAtrributes) {
+        for (AttributeType.Attribute attribute : attributeType.getTextAtrributes()) {
             textattr.setAttribute(attribute.attrName,attribute.value);
         }
         trans.appendChild(textattr);
@@ -90,129 +104,5 @@ public class TransCreator {
         return trans;
     }
 
-    static class AttributeType{
-        private Attribute[] posAtrributes;
-        private Attribute[] fillAtrributes;
-        private Attribute[] lineAtrributes;
-        private Attribute[] textAtrributes;
 
-        public Attribute[] getPosAtrributes() {
-            return posAtrributes;
-        }
-
-        public Attribute[] getFillAtrributes() {
-            return fillAtrributes;
-        }
-
-        public Attribute[] getLineAtrributes() {
-            return lineAtrributes;
-        }
-
-        public Attribute[] getTextAtrributes() {
-            return textAtrributes;
-        }
-
-        public AttributeType(Types type, PositionPicker.TransPositions positions) {
-            switch (type){
-                case TRANS:
-                    posAtrributes = new Attribute[]
-                            {new Attribute("x",positions.getTransX()),
-                                    new Attribute("y",positions.getTransY())};
-                    fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                            new Attribute("pattern",""),
-                            new Attribute("filled", "false")};
-                    lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("thick","1"),
-                                    new Attribute("type", "Solid")};
-                    textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("bold","false")};
-                    break;
-                case CODE:
-                    posAtrributes = new Attribute[]
-                            {new Attribute("x",positions.getCodeX()),
-                                    new Attribute("y",positions.getCodeY())};
-                    fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                                    new Attribute("pattern","Solid"),
-                                    new Attribute("filled", "false")};
-                    lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("thick","0"),
-                                    new Attribute("type", "Solid")};
-                    textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("bold","false")};
-                    break;
-                case TIME:
-                    posAtrributes = new Attribute[]
-                            {new Attribute("x",positions.getTimeX()),
-                                    new Attribute("y",positions.getTimeY())};
-                    fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                                    new Attribute("pattern","Solid"),
-                                    new Attribute("filled", "false")};
-                    lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("thick","0"),
-                                    new Attribute("type", "Solid")};
-                    textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("bold","false")};
-                    break;
-                case COND:
-                    posAtrributes = new Attribute[]
-                            {new Attribute("x",positions.getCondX()),
-                                    new Attribute("y",positions.getCondY())};
-                    fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                                    new Attribute("pattern","Solid"),
-                                    new Attribute("filled", "false")};
-                    lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("thick","0"),
-                                    new Attribute("type", "Solid")};
-                    textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("bold","false")};
-                case PRIORITY:
-                    posAtrributes = new Attribute[]
-                            {new Attribute("x",positions.getPriorityX()),
-                                    new Attribute("y",positions.getPriorityY())};
-                    fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                                    new Attribute("pattern","Solid"),
-                                    new Attribute("filled", "false")};
-                    lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("thick","0"),
-                                    new Attribute("type", "Solid")};
-                    textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
-                                    new Attribute("bold","false")};
-                    break;
-            }
-
-
-        }
-
-        class Attribute {
-            public String attrName;
-            public String value;
-            public Attribute(String attrName, String value) {
-                this.attrName = attrName;
-                this.value = value;
-            }
-        }
-
-        public enum Types{
-            TRANS,
-            COND,
-            TIME,
-            CODE,
-            PRIORITY
-        }
-    }
 }

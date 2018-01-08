@@ -49,17 +49,17 @@
           <id>STRING</id>
           <string/>
         </color>
-      <color id="ID1415313645">
+      <color id="ID1413601443">
           <id>STRING1</id>
           <string/>
           <layout>colset STRING1 = string;</layout>
         </color>
-        <color id="ID1415313646">
+        <color id="ID1413601444">
           <id>INT1</id>
           <int/>
           <layout>colset INT1 = int;</layout>
         </color>
-        <color id="ID1415313647">
+        <color id="ID1413601445">
           <id>CLASS1</id>
           <product>
             <id>STRING1</id>
@@ -73,7 +73,7 @@
     <page id="ID6">
       <pageattr name="New Page"/>
       <constraints/>
-    <place id="ID1415313644">
+    <place id="ID1413601442">
         <posattr x="-168.0" y="84.0"/>
         <fillattr colour="White" filled="false" pattern=""/>
         <lineattr colour="Black" thick="1" type="Solid"/>
@@ -99,30 +99,33 @@
           <text tool="CPN Tools"/>
         </type>
       </place>
-      <trans explicit="false" id="ID1415313648">
+      <trans explicit="false" id="ID1413601446">
         <posattr x="-18.0" y="84.0"/>
         <fillattr color="White" filled="false" pattern=""/>
         <lineattr color="Black" thick="1" type="Solid"/>
         <textattr bold="false" color="Black"/>
-        <cond id="ID1415313649">
+        <text tool="CPN Tools">getString</text>
+        <box h="40.000000" w="60.000000"/>
+        <binding x="7.20000" y="-3.00000"/>
+        <cond id="ID1413601447">
           <posattr x="-86.0" y="58.0"/>
           <fillattr color="White" filled="false" pattern="Solid"/>
           <lineattr color="Black" thick="0" type="Solid"/>
           <textattr bold="false" color="Black"/>
         </cond>
-        <time id="ID1415313650">
+        <time id="ID1413601448">
           <posattr x="26.5" y="110.0"/>
           <fillattr color="White" filled="false" pattern="Solid"/>
           <lineattr color="Black" thick="0" type="Solid"/>
           <textattr bold="false" color="Black"/>
         </time>
-        <code id="ID1415313651">
+        <code id="ID1413601449">
           <posattr x="46.5" y="37.0"/>
           <fillattr color="White" filled="false" pattern="Solid"/>
           <lineattr color="Black" thick="0" type="Solid"/>
           <textattr bold="false" color="Black"/>
         </code>
-        <priority id="ID1415313652">
+        <priority id="ID1413601450">
           <posattr x="-86.0" y="58.0"/>
           <fillattr color="White" filled="false" pattern="Solid"/>
           <lineattr color="Black" thick="0" type="Solid"/>
