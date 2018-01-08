@@ -1,5 +1,6 @@
 package parser.CPN.CPNCreators;
 
+import com.sun.istack.internal.Nullable;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import parser.Entities.ClassType;
@@ -47,8 +48,12 @@ public class ColorCreator {
     }
 
     private Element createSinglePrerequisite(PropertyType propertyType, Document document){
-        return createColor(document, IdCreator.getInstance().getNewId(), propertyType.getName().toUpperCase(),
-                TypeAssigner.assignType(propertyType), createLayout(propertyType));
+        return createColor(document,
+                IdCreator.getInstance().getNewId(),
+                null,
+                propertyType.getName().toUpperCase(),
+                TypeAssigner.assignType(propertyType),
+                createLayout(propertyType));
     }
 
 
@@ -56,19 +61,24 @@ public class ColorCreator {
     private void createClassColor(ClassType classType, Document document){
         color = createColor(document,
                 IdCreator.getInstance().getNewId(),
+                classType.getPropertyList(),
                 classType.getName().toUpperCase(),
                 classType.getName().toLowerCase(),
                 createLayout(classType)
                 );
     }
 
-    private Element createColor(Document document, String tagId, String innerId, String type, String layoutString){
+    private Element createColor(Document document, String tagId, @Nullable List<PropertyType> propertyTypeList, String innerId, String type, String layoutString){
         Element newColor = document.createElement(colorTag);
         newColor.setAttribute("id",tagId);
 
         Element id = document.createElement("id");
         id.appendChild(document.createTextNode(innerId));
         newColor.appendChild(id);
+
+        if (propertyTypeList != null){
+            newColor.appendChild(createProduct(document, propertyTypeList));
+        }
 
         Element className = document.createElement(type);
         newColor.appendChild(className);
@@ -78,6 +88,17 @@ public class ColorCreator {
         newColor.appendChild(layout);
 
         return newColor;
+    }
+
+    private Element createProduct(Document document, List<PropertyType> propertyTypeList){
+        Element product = document.createElement(PRODUCT);
+
+        for (PropertyType propertyType : propertyTypeList) {
+            Element property = document.createElement("id");
+            property.appendChild(document.createTextNode(propertyType.getName().toUpperCase()));
+            product.appendChild(property);
+        }
+        return product;
     }
 
     private String createLayout(ClassType classType){

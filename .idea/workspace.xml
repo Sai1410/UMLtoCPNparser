@@ -100,12 +100,12 @@
       <file leaf-file-name="ColorCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/ColorCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="49" column="109" lean-forward="false" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
+            <state relative-caret-position="300">
+              <caret line="79" column="76" lean-forward="false" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -859,12 +859,12 @@
       <workItem from="1515351626332" duration="361000" />
       <workItem from="1515352224620" duration="93000" />
       <workItem from="1515352336687" duration="6161000" />
-      <workItem from="1515416180779" duration="5595000" />
+      <workItem from="1515416180779" duration="6514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59327000" />
+    <option name="totallyTimeSpent" value="60246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -1007,12 +1007,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/ColorCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="49" column="109" lean-forward="false" selection-start-line="49" selection-start-column="109" selection-end-line="49" selection-end-column="109" />
+        <state relative-caret-position="300">
+          <caret line="79" column="76" lean-forward="false" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
           </folding>
         </state>
       </provider>
