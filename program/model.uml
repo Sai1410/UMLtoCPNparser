@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_LFGDwPS_Eee2N6GjceTWfA" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_LK80IPS_Eee2N6GjceTWfA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TDrq8PS_Eee2N6GjceTWfA" name="StringHolder">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WeVM4PS_Eee2N6GjceTWfA" name="Name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jJnzwPS_Eee2N6GjceTWfA" name="Surname">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_j8wg4PS_Eee2N6GjceTWfA" name="getName">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LPjK0PTAEee2N6GjceTWfA" name="Name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_klQrUPS_Eee2N6GjceTWfA" name="getSurname">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_UtzN8PTAEee2N6GjceTWfA" name="Surname">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fqMfgPS_Eee2N6GjceTWfA" name="IntHolder">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mjJUUPS_Eee2N6GjceTWfA" name="Age">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oTX70PS_Eee2N6GjceTWfA" name="Height">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n1tIYPS_Eee2N6GjceTWfA" name="Operation1">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="__44YEPTAEee2N6GjceTWfA" name="getAge">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oqieoPS_Eee2N6GjceTWfA" name="Operation2">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EoeTsPTBEee2N6GjceTWfA" name="getHeight">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>

@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$1.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Attribute.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Attribute.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Types.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Types.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PlaceCreator.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PlaceCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$ClassPositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$ClassPositions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$PlacePositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$PlacePositions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$TransPositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$TransPositions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/TransCreator.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/TransCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.cpn" afterPath="$PROJECT_DIR$/test/test.cpn" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/UML/UMLReader.java" afterPath="$PROJECT_DIR$/src/parser/UML/UMLReader.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -151,14 +136,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CPNCreator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CPNCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UMLReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parser/UML/UMLReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="51" column="78" lean-forward="false" selection-start-line="51" selection-start-column="78" selection-end-line="51" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValueExtractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/UML/ValueExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +172,7 @@
         <entry file="file://$PROJECT_DIR$/test/test.cpn">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+              <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -217,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/parser/UMLReader.java" />
         <option value="$PROJECT_DIR$/src/parser/Entities/ClassType.java" />
         <option value="$PROJECT_DIR$/src/parser/Entities/PropertyType.java" />
-        <option value="$PROJECT_DIR$/src/parser/UML/UMLReader.java" />
         <option value="$PROJECT_DIR$/src/parser/UML/ValueExtractor.java" />
         <option value="$PROJECT_DIR$/src/parser/resources/CPNNets/empty.cpn" />
         <option value="$PROJECT_DIR$/src/parser/resources/CPNNets/empty1.cpn" />
@@ -235,6 +239,7 @@
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java" />
+        <option value="$PROJECT_DIR$/src/parser/UML/UMLReader.java" />
       </list>
     </option>
   </component>
@@ -349,39 +354,6 @@
             <path>
               <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
               <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="CPN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="CPN" type="462c0819:PsiDirectoryNode" />
-              <item name="CPNCreators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="umlparser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-              <item name="CPNNets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="umlparser" type="b2602c69:ProjectViewProjectNode" />
@@ -879,12 +851,12 @@
       <workItem from="1515351626332" duration="361000" />
       <workItem from="1515352224620" duration="93000" />
       <workItem from="1515352336687" duration="6161000" />
-      <workItem from="1515416180779" duration="24526000" />
+      <workItem from="1515416180779" duration="26063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78258000" />
+    <option name="totallyTimeSpent" value="79795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -899,7 +871,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37655172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37655172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -976,7 +948,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/UML/ValueExtractor.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/parser/UML/ValueExtractor.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1049,7 +1035,7 @@
     <entry file="file://$PROJECT_DIR$/test/test.cpn">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
+          <caret line="108" column="43" lean-forward="false" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1121,10 +1107,26 @@
     <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/UML/ValueExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/UML/UMLReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="51" column="78" lean-forward="false" selection-start-line="51" selection-start-column="78" selection-end-line="51" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>

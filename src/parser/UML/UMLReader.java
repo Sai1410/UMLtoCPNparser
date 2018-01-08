@@ -20,6 +20,7 @@ public class UMLReader {
     private final static String OWNED_ATTRIBUTE_NAME = "ownedAttribute";
     private final static String OWNED_OPERATION_NAME = "ownedOperation";
     private final static String OWNED_DEFAULT_VALUE = "defaultValue";
+    private final static String PACKED_ELEMENT = "packagedElement";
 
     private List<ClassType> classList = new ArrayList<>();
     private Resource res;
@@ -48,27 +49,29 @@ public class UMLReader {
     private void generateClassList() {
         for (EObject eObject : res.getContents()) {
             for (EObject object : eObject.eContents()) {
-                ClassType classType = new ClassType(ValueExtractor.getTruncatedName(object.eGet(object.eClass().getEStructuralFeature("qualifiedName"))));
-                for (EObject ownedField : object.eContents()) {
-                    if (ownedField.eContainingFeature().getName().equals(OWNED_ATTRIBUTE_NAME)) {
-                        PropertyType propertyType = new PropertyType(
-                                ValueExtractor.getTruncatedName(ownedField.eGet(ownedField.eClass().getEStructuralFeature("qualifiedName")))
-                        );
-                        String type = extractType(ownedField);
-                        if(!type.isEmpty()){
-                            propertyType.setType(type);
+                if(object.eContainingFeature().getName().equals(PACKED_ELEMENT)) {
+                    ClassType classType = new ClassType(ValueExtractor.getTruncatedName(object.eGet(object.eClass().getEStructuralFeature("qualifiedName"))));
+                    for (EObject ownedField : object.eContents()) {
+                        if (ownedField.eContainingFeature().getName().equals(OWNED_ATTRIBUTE_NAME)) {
+                            PropertyType propertyType = new PropertyType(
+                                    ValueExtractor.getTruncatedName(ownedField.eGet(ownedField.eClass().getEStructuralFeature("qualifiedName")))
+                            );
+                            String type = extractType(ownedField);
+                            if (!type.isEmpty()) {
+                                propertyType.setType(type);
+                            }
+                            String defaultValue = extractDefaultValue(ownedField);
+                            if (!defaultValue.isEmpty()) {
+                                propertyType.setDefaultValue(defaultValue);
+                            }
+                            classType.addProperty(propertyType);
+                        } else if (ownedField.eContainingFeature().getName().equals(OWNED_OPERATION_NAME)) {
+                            OperationType operationType = new OperationType(ValueExtractor.getTruncatedName(ownedField.eGet(ownedField.eClass().getEStructuralFeature("qualifiedName"))));
+                            classType.addOperation(operationType);
                         }
-                        String defaultValue = extractDefaultValue(ownedField);
-                        if (!defaultValue.isEmpty()) {
-                            propertyType.setDefaultValue(defaultValue);
-                        }
-                        classType.addProperty(propertyType);
-                    } else if (ownedField.eContainingFeature().getName().equals(OWNED_OPERATION_NAME)){
-                        OperationType operationType = new OperationType(ValueExtractor.getTruncatedName(ownedField.eGet(ownedField.eClass().getEStructuralFeature("qualifiedName"))));
-                        classType.addOperation(operationType);
                     }
+                    classList.add(classType);
                 }
-                classList.add(classType);
             }
         }
     }
