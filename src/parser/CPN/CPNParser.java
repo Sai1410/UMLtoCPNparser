@@ -5,7 +5,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import parser.CPN.CPNCreators.ColorCreator;
 import parser.CPN.CPNCreators.PlaceCreator;
+import parser.CPN.CPNCreators.TransCreator;
 import parser.Entities.ClassType;
+import parser.Entities.OperationType;
 
 import java.util.List;
 
@@ -30,6 +32,11 @@ public class CPNParser {
                 colsetBlock.appendChild(prerequisite);
             }
             colsetBlock.appendChild(ColorCreator.colorFromClass(classType,document));
+
+            for (OperationType operationType: classType.getOperationList()) {
+                page.appendChild(TransCreator.createTransitionFromOperation(operationType, document));
+            }
+
         }
     }
 

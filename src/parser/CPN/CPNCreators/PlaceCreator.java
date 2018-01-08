@@ -7,7 +7,6 @@ import parser.Entities.ClassType;
 public class PlaceCreator {
 
     private final static String placeTag = "place";
-    private final static String startingPlaceId = "ID1412323325";
     private Document document;
     private Element place;
 
@@ -30,14 +29,14 @@ public class PlaceCreator {
 
     private Element createPlace(ClassType classType){
         Element place = document.createElement(placeTag);
-        place.setAttribute("id",startingPlaceId);
+        place.setAttribute("id",IdCreator.getInstance().getNewId());
 
         Element posattr = document.createElement("posattr");
         posattr.setAttribute("x",placePositions.getPlaceX());
         posattr.setAttribute("y", placePositions.getPlaceY());
         place.appendChild(posattr);
 
-        Element fillattr = document.createElement("lineattr");
+        Element fillattr = document.createElement("fillattr");
         fillattr.setAttribute("colour", "White");
         fillattr.setAttribute("pattern", "");
         fillattr.setAttribute("filled", "false");
