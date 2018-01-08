@@ -29,15 +29,15 @@ public class AttributeType {
                             {new Attribute("x",positions.getTransX()),
                                     new Attribute("y",positions.getTransY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","Red"),
+                            {new Attribute("colour","Red"),
                                     new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("thick","1"),
                                     new Attribute("type", "Solid")};
                     textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("bold","false")};
                     break;
                 case CODE:
@@ -45,15 +45,15 @@ public class AttributeType {
                             {new Attribute("x",positions.getCodeX()),
                                     new Attribute("y",positions.getCodeY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
+                            {new Attribute("colour","White"),
                                     new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("thick","0"),
                                     new Attribute("type", "Solid")};
                     textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("bold","false")};
                     break;
                 case TIME:
@@ -61,15 +61,15 @@ public class AttributeType {
                             {new Attribute("x",positions.getTimeX()),
                                     new Attribute("y",positions.getTimeY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
+                            {new Attribute("colour","White"),
                                     new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("thick","0"),
                                     new Attribute("type", "Solid")};
                     textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("bold","false")};
                     break;
                 case COND:
@@ -77,30 +77,30 @@ public class AttributeType {
                             {new Attribute("x",positions.getCondX()),
                                     new Attribute("y",positions.getCondY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
+                            {new Attribute("colour","White"),
                                     new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("thick","0"),
                                     new Attribute("type", "Solid")};
                     textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("bold","false")};
                 case PRIORITY:
                     posAtrributes = new Attribute[]
                             {new Attribute("x",positions.getPriorityX()),
                                     new Attribute("y",positions.getPriorityY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
+                            {new Attribute("colour","White"),
                                     new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("thick","0"),
                                     new Attribute("type", "Solid")};
                     textAtrributes = new Attribute[]
-                            {new Attribute("color","Black"),
+                            {new Attribute("colour","Black"),
                                     new Attribute("bold","false")};
                     break;
             }
