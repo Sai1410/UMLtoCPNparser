@@ -29,8 +29,8 @@ public class AttributeType {
                             {new Attribute("x",positions.getTransX()),
                                     new Attribute("y",positions.getTransY())};
                     fillAtrributes = new Attribute[]
-                            {new Attribute("color","White"),
-                                    new Attribute("pattern",""),
+                            {new Attribute("color","Red"),
+                                    new Attribute("pattern","Solid"),
                                     new Attribute("filled", "false")};
                     lineAtrributes = new Attribute[]
                             {new Attribute("color","Black"),

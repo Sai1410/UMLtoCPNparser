@@ -37,16 +37,9 @@ public class TransCreator {
         Element trans = document.createElement(TRANS_TAG);
         trans.setAttribute("id", IdCreator.getInstance().getNewId());
         trans.setAttribute("explicit","false");
-        AttributeType attributeType = new AttributeType(AttributeType.Types.TRANS,transPositions);
-        for (AttributeType.Attribute attribute : attributeType.getFillAtrributes()) {
-            System.out.println(attribute.attrName + " :::: " + attribute.value);
-        }
 
-        trans = addBasicFields(trans,document,attributeType,operationType.getName());
 
-        Element text = document.createElement("text");
-        text.appendChild(document.createTextNode(operationType.getName()));
-        trans.appendChild(text);
+        trans = addBasicFields(trans,document,new AttributeType(AttributeType.Types.TRANS,transPositions),operationType.getName());
 
         Element box = document.createElement("box");
         box.setAttribute("w","60.000000");
