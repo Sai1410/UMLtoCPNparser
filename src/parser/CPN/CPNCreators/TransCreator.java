@@ -1,5 +1,6 @@
 package parser.CPN.CPNCreators;
 
+import com.sun.istack.internal.Nullable;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -36,8 +37,12 @@ public class TransCreator {
         Element trans = document.createElement(TRANS_TAG);
         trans.setAttribute("id", IdCreator.getInstance().getNewId());
         trans.setAttribute("explicit","false");
+        AttributeType attributeType = new AttributeType(AttributeType.Types.TRANS,transPositions);
+        for (AttributeType.Attribute attribute : attributeType.getFillAtrributes()) {
+            System.out.println(attribute.attrName + " :::: " + attribute.value);
+        }
 
-        trans = addBasicFields(trans,document,new AttributeType(AttributeType.Types.TRANS,transPositions));
+        trans = addBasicFields(trans,document,attributeType,operationType.getName());
 
         Element text = document.createElement("text");
         text.appendChild(document.createTextNode(operationType.getName()));
@@ -55,28 +60,28 @@ public class TransCreator {
 
         Element cond = document.createElement(COND_TAG);
         cond.setAttribute("id", IdCreator.getInstance().getNewId());
-        cond = addBasicFields(cond,document,new AttributeType(AttributeType.Types.COND, transPositions));
+        cond = addBasicFields(cond,document,new AttributeType(AttributeType.Types.COND, transPositions),null);
         trans.appendChild(cond);
 
         Element time = document.createElement(TIME_TAG);
         time.setAttribute("id", IdCreator.getInstance().getNewId());
-        time = addBasicFields(time,document,new AttributeType(AttributeType.Types.TIME, transPositions));
+        time = addBasicFields(time,document,new AttributeType(AttributeType.Types.TIME, transPositions),null);
         trans.appendChild(time);
 
         Element code = document.createElement(CODE_TAG);
         code.setAttribute("id", IdCreator.getInstance().getNewId());
-        code = addBasicFields(code,document,new AttributeType(AttributeType.Types.CODE, transPositions));
+        code = addBasicFields(code,document,new AttributeType(AttributeType.Types.CODE, transPositions),null);
         trans.appendChild(code);
 
         Element priority = document.createElement(PRIORITY_TAG);
         priority.setAttribute("id", IdCreator.getInstance().getNewId());
-        priority = addBasicFields(priority,document,new AttributeType(AttributeType.Types.PRIORITY, transPositions));
+        priority = addBasicFields(priority,document,new AttributeType(AttributeType.Types.PRIORITY, transPositions),null);
         trans.appendChild(priority);
 
         return trans;
     }
 
-    private Element addBasicFields(Element trans, Document document, AttributeType attributeType){
+    private Element addBasicFields(Element trans, Document document, AttributeType attributeType, @Nullable String textValue){
         Element posattr = document.createElement("posattr");
         for (AttributeType.Attribute attribute : attributeType.getPosAtrributes()) {
             posattr.setAttribute(attribute.attrName,attribute.value);
@@ -100,6 +105,12 @@ public class TransCreator {
             textattr.setAttribute(attribute.attrName,attribute.value);
         }
         trans.appendChild(textattr);
+
+        Element text = document.createElement("text");
+        if (textValue != null) {
+            text.appendChild(document.createTextNode(textValue));
+        }
+        trans.appendChild(text);
 
         return trans;
     }
