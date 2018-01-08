@@ -57,6 +57,8 @@ public class PositionPicker {
         private final static double TYPE_Y_OFFSET =  -16.000000;
         private final static double MARK_X_OFFSET = 57.000000;
         private final static double MARK_Y_OFFSET = 23.000000;
+        private final static double INIT_MARK_X_OFFSET = 56.0000;
+        private final static double INIT_MARK_Y_OFFSET = 32.0000;
 
         private double placeX;
         private double placeY;
@@ -64,6 +66,9 @@ public class PositionPicker {
         private double typeY;
         private double markX;
         private double markY;
+        private double initMarkX;
+        private double initMarkY;
+
 
         public PlacePositions(double placeX, double placeY) {
             this.placeX = placeX;
@@ -72,6 +77,8 @@ public class PositionPicker {
             this.typeY = placeY + TYPE_Y_OFFSET;
             this.markX = placeX + MARK_X_OFFSET;
             this.markY = placeY + MARK_Y_OFFSET;
+            this.initMarkX = placeX + INIT_MARK_X_OFFSET;
+            this.initMarkY = placeY + INIT_MARK_Y_OFFSET;
         }
 
         public String getPlaceX() {
@@ -96,6 +103,14 @@ public class PositionPicker {
 
         public String getMarkY() {
             return String.valueOf(markY);
+        }
+
+        public String getInitMarkX() {
+            return String.valueOf(initMarkX);
+        }
+
+        public String getInitMarkY() {
+            return String.valueOf(initMarkY);
         }
     }
 

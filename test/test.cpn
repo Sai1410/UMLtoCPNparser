@@ -49,17 +49,17 @@
           <id>STRING</id>
           <string/>
         </color>
-      <color id="ID1412678327">
+      <color id="ID1417640334">
           <id>STRING1</id>
           <string/>
           <layout>colset STRING1 = string;</layout>
         </color>
-        <color id="ID1412678328">
+        <color id="ID1417640335">
           <id>INT1</id>
           <int/>
           <layout>colset INT1 = int;</layout>
         </color>
-        <color id="ID1412678329">
+        <color id="ID1417640336">
           <id>CLASS1</id>
           <product>
             <id>STRING1</id>
@@ -73,9 +73,9 @@
     <page id="ID6">
       <pageattr name="New Page"/>
       <constraints/>
-    <place id="ID1412678326">
+    <place id="ID1417640331">
         <posattr x="-168.0" y="84.0"/>
-        <fillattr colour="White" filled="false" pattern=""/>
+        <fillattr colour="White" filled="false" pattern="Solid"/>
         <lineattr colour="Black" thick="1" type="Solid"/>
         <textattr bold="false" colour="Black"/>
         <text tool="CPN Tools">Class1</text>
@@ -84,51 +84,51 @@
         <marking hidden="false" x="0.000000" y="0.000000">
           <snap anchor.horizontal="0" anchor.vertical="0" snap_id="0"/>
         </marking>
-        <type id="ID1412323326">
+        <type id="ID1417640332">
           <posattr x="-125.5" y="68.0"/>
-          <lineattr colour="White" filled="false" pattern="Solid"/>
+          <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>
           <textattr bold="false" colour="Black"/>
-          <text tool="CPN Tools">Class1</text>
+          <text tool="CPN Tools">CLASS1</text>
         </type>
-        <type id="ID1412323327">
-          <posattr x="-111.0" y="107.0"/>
-          <lineattr colour="White" filled="false" pattern="Solid"/>
+        <initmark id="ID1417640333">
+          <posattr x="-112.0" y="116.0"/>
+          <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>
           <textattr bold="false" colour="Black"/>
           <text tool="CPN Tools"/>
-        </type>
+        </initmark>
       </place>
-      <trans explicit="false" id="ID1412678330">
+      <trans explicit="false" id="ID1417640337">
         <posattr x="-18.0" y="84.0"/>
-        <fillattr colour="Red" filled="false" pattern="Solid"/>
+        <fillattr colour="White" filled="false" pattern="Solid"/>
         <lineattr colour="Black" thick="1" type="Solid"/>
         <textattr bold="false" colour="Black"/>
         <text tool="CPN Tools">getString</text>
         <box h="40.000000" w="60.000000"/>
         <binding x="7.20000" y="-3.00000"/>
-        <cond id="ID1412678331">
-          <posattr x="-86.0" y="58.0"/>
+        <cond id="ID1417640338">
+          <posattr x="-57.0" y="110.0"/>
           <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>
           <textattr bold="false" colour="Black"/>
           <text tool="CPN Tools"/>
         </cond>
-        <time id="ID1412678332">
+        <time id="ID1417640339">
           <posattr x="26.5" y="110.0"/>
           <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>
           <textattr bold="false" colour="Black"/>
           <text tool="CPN Tools"/>
         </time>
-        <code id="ID1412678333">
+        <code id="ID1417640340">
           <posattr x="46.5" y="37.0"/>
           <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>
           <textattr bold="false" colour="Black"/>
           <text tool="CPN Tools"/>
         </code>
-        <priority id="ID1412678334">
+        <priority id="ID1417640341">
           <posattr x="-86.0" y="58.0"/>
           <fillattr colour="White" filled="false" pattern="Solid"/>
           <lineattr colour="Black" thick="0" type="Solid"/>

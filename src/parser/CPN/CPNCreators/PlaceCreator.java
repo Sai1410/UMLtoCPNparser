@@ -4,58 +4,35 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import parser.Entities.ClassType;
 
-public class PlaceCreator {
+public class PlaceCreator extends CPNCreator {
 
     private final static String placeTag = "place";
-    private Document document;
+    private final static String initMarkTag = "initmark";
+    private final static String typeTag = "type";
     private Element place;
-
     private PositionPicker.PlacePositions placePositions;
+
+    private PlaceCreator(ClassType classType, Document document){
+        placePositions = PositionPicker.getInstance().getNewPlacePositions();
+        place  = createPlace(classType, document);
+    }
 
     public static Element placeFromClass(ClassType classType, Document document) {
         PlaceCreator placeCreator = new PlaceCreator(classType, document);
         return placeCreator.getParsedPlace();
     }
 
-    private PlaceCreator(ClassType classType, Document document){
-        this.document = document;
-        placePositions = PositionPicker.getInstance().getNewPlacePositions();
-        place  = createPlace(classType);
-    }
+
 
     private Element getParsedPlace(){
         return place;
     }
 
-    private Element createPlace(ClassType classType){
+    private Element createPlace(ClassType classType, Document document){
         Element place = document.createElement(placeTag);
         place.setAttribute("id",IdCreator.getInstance().getNewId());
 
-        Element posattr = document.createElement("posattr");
-        posattr.setAttribute("x",placePositions.getPlaceX());
-        posattr.setAttribute("y", placePositions.getPlaceY());
-        place.appendChild(posattr);
-
-        Element fillattr = document.createElement("fillattr");
-        fillattr.setAttribute("colour", "White");
-        fillattr.setAttribute("pattern", "");
-        fillattr.setAttribute("filled", "false");
-        place.appendChild(fillattr);
-
-        Element lineattr = document.createElement("lineattr");
-        lineattr.setAttribute("colour", "Black");
-        lineattr.setAttribute("thick", "1");
-        lineattr.setAttribute("type", "Solid");
-        place.appendChild(lineattr);
-
-        Element textattr = document.createElement("textattr");
-        textattr.setAttribute("colour", "Black");
-        textattr.setAttribute("bold", "false");
-        place.appendChild(textattr);
-
-        Element text = document.createElement("text");
-        text.appendChild(document.createTextNode(classType.getName()));
-        place.appendChild(text);
+        place = addBasicFields(place, document, new AttributeType(AttributeType.Types.PLACE, placePositions), classType.getName());
 
         Element ellipse = document.createElement("ellipse");
         ellipse.setAttribute("w","60.000000");
@@ -71,6 +48,7 @@ public class PlaceCreator {
         marking.setAttribute("x", "0.000000");
         marking.setAttribute("y", "0.000000");
         marking.setAttribute("hidden", "false");
+        place.appendChild(marking);
 
         Element snap = document.createElement("snap");
         snap.setAttribute("snap_id", "0");
@@ -78,77 +56,27 @@ public class PlaceCreator {
         snap.setAttribute("anchor.vertical", "0");
         marking.appendChild(snap);
 
-        place.appendChild(marking);
 
-        place.appendChild(createPlaceType(classType));
 
-        place.appendChild(createInitMarking());
+        place.appendChild(createPlaceType(classType, document));
+
+        place.appendChild(createInitMarking(document));
 
         return place;
     }
 
-    private Element createPlaceType(ClassType classType){
-        Element type = document.createElement("type");
-        type.setAttribute("id","ID1412323326");
-
-        Element posattr = document.createElement("posattr");
-        posattr.setAttribute("x",placePositions.getTypeX());
-        posattr.setAttribute("y", placePositions.getTypeY());
-        type.appendChild(posattr);
-
-        Element fillattr = document.createElement("lineattr");
-        fillattr.setAttribute("colour", "White");
-        fillattr.setAttribute("pattern", "Solid");
-        fillattr.setAttribute("filled", "false");
-        type.appendChild(fillattr);
-
-        Element lineattr = document.createElement("lineattr");
-        lineattr.setAttribute("colour", "Black");
-        lineattr.setAttribute("thick", "0");
-        lineattr.setAttribute("type", "Solid");
-        type.appendChild(lineattr);
-
-        Element textattr = document.createElement("textattr");
-        textattr.setAttribute("colour", "Black");
-        textattr.setAttribute("bold", "false");
-        type.appendChild(textattr);
-
-        Element text = document.createElement("text");
-        text.appendChild(document.createTextNode(classType.getName()));
-        type.appendChild(text);
+    private Element createPlaceType(ClassType classType, Document document){
+        Element type = document.createElement(typeTag);
+        type.setAttribute("id",IdCreator.getInstance().getNewId());
+        type = addBasicFields(type, document, new AttributeType(AttributeType.Types.TYPE, placePositions), classType.getName().toUpperCase());
 
         return type;
     }
 
-    private Element createInitMarking(){
-        Element initMaring = document.createElement("type");
-        initMaring.setAttribute("id","ID1412323327");
-
-        Element posattr = document.createElement("posattr");
-        posattr.setAttribute("x",placePositions.getMarkX());
-        posattr.setAttribute("y", placePositions.getMarkY());
-        initMaring.appendChild(posattr);
-
-        Element fillattr = document.createElement("lineattr");
-        fillattr.setAttribute("colour", "White");
-        fillattr.setAttribute("pattern", "Solid");
-        fillattr.setAttribute("filled", "false");
-        initMaring.appendChild(fillattr);
-
-        Element lineattr = document.createElement("lineattr");
-        lineattr.setAttribute("colour", "Black");
-        lineattr.setAttribute("thick", "0");
-        lineattr.setAttribute("type", "Solid");
-        initMaring.appendChild(lineattr);
-
-        Element textattr = document.createElement("textattr");
-        textattr.setAttribute("colour", "Black");
-        textattr.setAttribute("bold", "false");
-        initMaring.appendChild(textattr);
-
-        Element text = document.createElement("text");
-        text.appendChild(document.createTextNode(""));
-        initMaring.appendChild(text);
+    private Element createInitMarking(Document document){
+        Element initMaring = document.createElement(initMarkTag);
+        initMaring.setAttribute("id",IdCreator.getInstance().getNewId());
+        initMaring = addBasicFields(initMaring, document, new AttributeType(AttributeType.Types.INITMARKING, placePositions),null);
 
         return initMaring;
     }

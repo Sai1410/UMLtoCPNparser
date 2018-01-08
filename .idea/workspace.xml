@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$1.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Attribute.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Attribute.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Types.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType$Types.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/AttributeType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PlaceCreator.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PlaceCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$ClassPositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$ClassPositions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$PlacePositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$PlacePositions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$TransPositions.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/PositionPicker$TransPositions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/TransCreator.class" afterPath="$PROJECT_DIR$/out/production/umlParser/parser/CPN/CPNCreators/TransCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" afterPath="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.cpn" afterPath="$PROJECT_DIR$/test/test.cpn" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,12 +75,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AttributeType.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CPNParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XMLCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/CPN/XMLCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="e#1716#1717#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="239">
+              <caret line="43" column="71" lean-forward="false" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PositionPicker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3650#3651#0" expanded="true" />
+                <element signature="e#3706#3707#0" expanded="true" />
+                <element signature="e#3746#3747#0" expanded="true" />
+                <element signature="e#3802#3803#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +130,8 @@
       <file leaf-file-name="TransCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="41" column="87" lean-forward="false" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
+            <state relative-caret-position="282">
+              <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,8 +142,20 @@
       <file leaf-file-name="PlaceCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="855">
+              <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CPNCreator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,7 +166,7 @@
       <file leaf-file-name="test.cpn" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.cpn">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="15">
               <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
               <folding />
             </state>
@@ -159,12 +228,13 @@
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/IdCreator.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TypeAssigner.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/ColorCreator.java" />
-        <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" />
-        <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNParser.java" />
         <option value="$PROJECT_DIR$/test/test.cpn" />
+        <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java" />
+        <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java" />
         <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java" />
+        <option value="$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java" />
       </list>
     </option>
   </component>
@@ -809,12 +879,12 @@
       <workItem from="1515351626332" duration="361000" />
       <workItem from="1515352224620" duration="93000" />
       <workItem from="1515352336687" duration="6161000" />
-      <workItem from="1515416180779" duration="17768000" />
+      <workItem from="1515416180779" duration="24526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71500000" />
+    <option name="totallyTimeSpent" value="78258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
@@ -829,7 +899,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37655172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37655172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -856,6 +926,43 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37655172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18194444" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -868,7 +975,9 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -927,54 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="92" lean-forward="false" selection-start-line="49" selection-start-column="92" selection-end-line="49" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4745#4746#0" expanded="true" />
-            <element signature="e#4798#4799#0" expanded="true" />
-            <element signature="e#4835#4836#0" expanded="true" />
-            <element signature="e#4888#4889#0" expanded="true" />
-            <element signature="e#4924#4925#0" expanded="true" />
-            <element signature="e#4976#4977#0" expanded="true" />
-            <element signature="e#5012#5013#0" expanded="true" />
-            <element signature="e#5064#5065#0" expanded="true" />
-            <element signature="e#5100#5101#0" expanded="true" />
-            <element signature="e#5152#5153#0" expanded="true" />
-            <element signature="e#5188#5189#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-            <element signature="e#5276#5277#0" expanded="true" />
-            <element signature="e#5328#5329#0" expanded="true" />
-            <element signature="e#5364#5365#0" expanded="true" />
-            <element signature="e#5416#5417#0" expanded="true" />
-            <element signature="e#5456#5457#0" expanded="true" />
-            <element signature="e#5512#5513#0" expanded="true" />
-            <element signature="e#5552#5553#0" expanded="true" />
-            <element signature="e#5608#5609#0" expanded="true" />
-            <element signature="e#5986#5987#0" expanded="true" />
-            <element signature="e#6031#6032#0" expanded="true" />
-            <element signature="e#6075#6076#0" expanded="true" />
-            <element signature="e#6134#6135#0" expanded="true" />
-            <element signature="e#6191#6192#0" expanded="true" />
-            <element signature="e#6273#6274#0" expanded="true" />
-            <element signature="e#6345#6346#0" expanded="true" />
-            <element signature="e#6407#6408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="36" column="91" lean-forward="false" selection-start-line="36" selection-start-column="91" selection-end-line="36" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/TypeAssigner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -987,26 +1048,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test.cpn">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="15">
           <caret line="108" column="43" lean-forward="true" selection-start-line="108" selection-start-column="43" selection-end-line="108" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PositionPicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="705">
+          <caret line="112" column="44" lean-forward="false" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3650#3651#0" expanded="true" />
+            <element signature="e#3706#3707#0" expanded="true" />
+            <element signature="e#3746#3747#0" expanded="true" />
+            <element signature="e#3802#3803#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/XMLCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="41" column="87" lean-forward="false" selection-start-line="41" selection-start-column="87" selection-end-line="41" selection-end-column="87" />
+        <state relative-caret-position="135">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="e#1716#1717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1015,9 +1090,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/AttributeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="239">
+          <caret line="43" column="71" lean-forward="false" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/PlaceCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/TransCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parser/CPN/CPNCreators/CPNCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
