@@ -28,12 +28,12 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_oTX70PS_Eee2N6GjceTWfA" name="Height">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_n1tIYPS_Eee2N6GjceTWfA" name="Operation1">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n1tIYPS_Eee2N6GjceTWfA" name="getAge">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="__44YEPTAEee2N6GjceTWfA" name="getAge">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_oqieoPS_Eee2N6GjceTWfA" name="Operation2">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_oqieoPS_Eee2N6GjceTWfA" name="getHeight">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_EoeTsPTBEee2N6GjceTWfA" name="getHeight">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>

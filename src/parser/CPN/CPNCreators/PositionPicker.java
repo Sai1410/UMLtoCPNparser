@@ -1,5 +1,9 @@
 package parser.CPN.CPNCreators;
 
+
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +53,10 @@ public class PositionPicker {
         transPositions = new TransPositions(newTransX,(classPositionsList.size() - 1) * DISTANCE_SEPARATOR + STARTING_Y);
         classPositionsList.get(classPositionsList.size()-1).addTransPositions(transPositions);
         return transPositions;
+    }
+
+    public ArcAnnotationPositions getNewArcAnnotPositions(Element place, Element trans){
+        return new ArcAnnotationPositions(place,trans);
     }
 
     class PlacePositions {
@@ -212,6 +220,32 @@ public class PositionPicker {
 
         public void addTransPositions(TransPositions transPositions) {
             transPositionsList.add(transPositions);
+        }
+    }
+
+    public class ArcAnnotationPositions{
+        private double x;
+        private double y;
+
+        public ArcAnnotationPositions(Element place, Element transition){
+           NodeList placePos = place.getElementsByTagName("posattr");
+            double placeX = Double.valueOf(placePos.item(0).getAttributes().getNamedItem("x").getNodeValue());
+            double placeY = Double.valueOf(placePos.item(0).getAttributes().getNamedItem("y").getNodeValue());
+
+            NodeList transitionPos = transition.getElementsByTagName("posattr");
+            double transitionX = Double.valueOf(transitionPos.item(0).getAttributes().getNamedItem("x").getNodeValue());
+            double transitionY = Double.valueOf(transitionPos.item(0).getAttributes().getNamedItem("y").getNodeValue());
+
+            this.x = (placeX + transitionX) / 2.0;
+            this.y = (placeY + transitionY) / 2.0;
+        }
+
+        public String getX() {
+            return String.valueOf(x);
+        }
+
+        public String getY() {
+            return String.valueOf(y);
         }
     }
 }

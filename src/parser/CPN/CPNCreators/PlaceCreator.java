@@ -19,12 +19,12 @@ public class PlaceCreator extends CPNCreator {
 
     public static Element placeFromClass(ClassType classType, Document document) {
         PlaceCreator placeCreator = new PlaceCreator(classType, document);
-        return placeCreator.getParsedPlace();
+        return placeCreator.getPlace();
     }
 
 
 
-    private Element getParsedPlace(){
+    private Element getPlace(){
         return place;
     }
 

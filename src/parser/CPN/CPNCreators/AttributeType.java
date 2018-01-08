@@ -1,5 +1,7 @@
 package parser.CPN.CPNCreators;
 
+import com.sun.istack.internal.Nullable;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,10 +19,7 @@ public class AttributeType {
     private Attribute[] lineAtrributes;
     private Attribute[] textAtrributes;
 
-    public Types types;
-
     public AttributeType(Types type, PositionPicker.TransPositions positions) {
-        this.types = type;
         switch (type) {
             case TRANS:
                 posAtrributes = new Attribute[]
@@ -101,6 +100,28 @@ public class AttributeType {
 
     }
 
+    public AttributeType(Types type, @Nullable PositionPicker.ArcAnnotationPositions arcAnnotationPositions){
+        switch (type){
+            case ARC:
+                posAtrributes = new Attribute[]
+                        {new Attribute("x", "0.00000"),
+                                new Attribute("y", "0.00000")};
+                setStandardAttributes();
+            case ARC_ANNOT:
+                if (arcAnnotationPositions!=null) {
+                    posAtrributes = new Attribute[]
+                            {new Attribute("x", arcAnnotationPositions.getX()),
+                                    new Attribute("y", arcAnnotationPositions.getY())};
+                }else {
+                    posAtrributes = new Attribute[]
+                            {new Attribute("x", "0.00000"),
+                                    new Attribute("y", "0.00000")};
+                    setStandardAttributes();
+                }
+                setStandardAttributes();
+        }
+    }
+
     public Attribute[] getPosAtrributes() {
         return posAtrributes;
     }
@@ -154,7 +175,9 @@ public class AttributeType {
         PRIORITY,
         TYPE,
         INITMARKING,
-        PLACE
+        PLACE,
+        ARC,
+        ARC_ANNOT
     }
 
     class Attribute {
