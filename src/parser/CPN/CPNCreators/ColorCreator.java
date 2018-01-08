@@ -47,7 +47,7 @@ public class ColorCreator {
     }
 
     private Element createSinglePrerequisite(PropertyType propertyType, Document document){
-        return createColor(document, IdCreator.getInstance().getNewId(), propertyType.getName(),
+        return createColor(document, IdCreator.getInstance().getNewId(), propertyType.getName().toUpperCase(),
                 TypeAssigner.assignType(propertyType), createLayout(propertyType));
     }
 

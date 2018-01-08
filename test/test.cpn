@@ -49,17 +49,17 @@
           <id>STRING</id>
           <string/>
         </color>
-      <color id="ID1419375962">
-          <id>string1</id>
+      <color id="ID1421513126">
+          <id>STRING1</id>
           <string/>
           <layout>colset STRING1 = string;</layout>
         </color>
-        <color id="ID1419375963">
-          <id>int1</id>
+        <color id="ID1421513127">
+          <id>INT1</id>
           <int/>
           <layout>colset INT1 = int;</layout>
         </color>
-        <color id="ID1419375964">
+        <color id="ID1421513128">
           <id>CLASS1</id>
           <class1/>
           <layout>colset CLASS1 = product STRING1 *  INT1;</layout>
