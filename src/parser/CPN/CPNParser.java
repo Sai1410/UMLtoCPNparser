@@ -26,7 +26,10 @@ public class CPNParser {
         System.out.println("ADDING DATA");
         for (ClassType classType: classTypeList){
             page.appendChild(PlaceCreator.placeFromClass(classType, document));
-            colsetBlock.appendChild(ColorCreator.placeFromClass(classType,document));
+            for (Element prerequisite :ColorCreator.colorPrerequisites(classType,document)) {
+                colsetBlock.appendChild(prerequisite);
+            }
+            colsetBlock.appendChild(ColorCreator.colorFromClass(classType,document));
         }
     }
 
