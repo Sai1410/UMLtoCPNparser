@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
@@ -12,6 +14,7 @@ import parser.CPN.XMLCreator;
 import parser.Entities.ClassType;
 import parser.UML.UMLReader;
 import parser.UML.ValueExtractor;
+import parser.Utils.ResultType;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -28,6 +31,13 @@ public class MainController {
 
     private List<ClassType> classList = new ArrayList<>();
     private XMLCreator creator = new XMLCreator();
+    private ResultType resultType;
+
+    public void initialize(){
+        changeResultType(new ResultType(ResultType.Type.UML_NOT_PICKED));
+    }
+
+
 
     @FXML protected void handleUMLChoose(ActionEvent event){
         FileChooser fileChooser = new FileChooser();
@@ -44,6 +54,7 @@ public class MainController {
             umlPath = file.getAbsolutePath();
             umlPathText.setText(umlPath);
             loadUML();
+            checkState();
         }
     }
 
@@ -54,7 +65,20 @@ public class MainController {
         if (file != null) {
             outputPath = file.getAbsolutePath();
             outputPathText.setText(outputPath);
+            checkState();
         }
+    }
+
+    private void checkState() {
+        ResultType resultType;
+        if (umlPath.isEmpty()) {
+            resultType = new ResultType(ResultType.Type.UML_NOT_PICKED);
+        } else if (outputPath.isEmpty()) {
+            resultType = new ResultType(ResultType.Type.OUTPUT_NOT_PICKED);
+        } else {
+            resultType = new ResultType(ResultType.Type.READY_TO_PARSE);
+        }
+        changeResultType(resultType);
     }
 
     @FXML protected void handleConvert(ActionEvent event){
@@ -67,12 +91,29 @@ public class MainController {
         } else {
             creator.injectUMLData(classList);
             creator.saveXML(outputPath, ValueExtractor.extractFileName(umlPath));
+            changeResultType(new ResultType(ResultType.Type.GENERATED));
         }
     }
 
     private void loadUML(){
         UMLReader reader = new UMLReader(umlPath);
         classList = reader.getClassList();
+    }
+
+    private void changeResultType(ResultType type){
+        resultType = type;
+        setResultLabel();
+    }
+
+    private void setResultLabel(){
+        resultLabel.setText(resultType.getResult());
+        Paint textPaint;
+        if (resultType.isTypeGood()){
+            textPaint = Color.web("#28d200");
+        }else {
+            textPaint = Color.web("#ed0a0a");
+        }
+        resultLabel.setTextFill(textPaint);
     }
 
     void setStage(Stage stage){

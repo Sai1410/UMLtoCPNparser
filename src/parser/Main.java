@@ -23,6 +23,7 @@ public class Main extends Application {
         primaryStage.show();
         MainController controller = (MainController) loader.getController();
         controller.setStage(primaryStage);
+        controller.initialize();
     }
 
     public static void main(String[] args) {
