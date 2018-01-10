@@ -8,7 +8,13 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="umlParser.jar" size="226017" download="eager" />
+    <jar href="externalLibspack/org.eclipse.emf.common-2.12.0.jar" size="357670" download="eager" />
+    <jar href="externalLibspack/org.eclipse.emf.ecore-2.12.0.jar" size="1190945" download="eager" />
+    <jar href="externalLibspack/org.eclipse.emf.ecore.xmi-2.12.0.jar" size="230424" download="eager" />
+    <jar href="externalLibspack/org.eclipse.uml2.common-2.0.1.v20140910-1354.jar" size="84347" download="eager" />
+    <jar href="externalLibspack/org.eclipse.uml2.uml-5.0.1.v20140910-1354.jar" size="3439961" download="eager" />
+    <jar href="externalLibspack/types-2.0.0-v20140602-0749.jar" size="18419" download="eager" />
+    <jar href="umlParser.jar" size="231062" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="parser.Main"  name="umlParser" />
   <update check="background"/>

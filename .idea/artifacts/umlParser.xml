@@ -14,8 +14,8 @@
     <root id="root">
       <element id="archive" name="umlParser.jar">
         <element id="module-output" name="umlParser" />
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="directory" name="externalLibspack">
+          <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/externalLibs/externalLibs.jar" path-in-jar="/" />
         </element>
       </element>
     </root>

@@ -1,5 +1,7 @@
 package parser.CPN;
 
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import parser.Entities.ClassType;
 
@@ -13,23 +15,19 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.net.URL;
 import java.util.List;
 
 public class XMLCreator {
 
-    private static final String emptyTemplatePath = "src/parser/resources/CPNNets/empty1.cpn";
+    private static final String emptyTemplateName = "empty1.cpn";
+    private static final String dtdFile = "cpn.dtd";
     private CPNParser cpnParser;
 
     public XMLCreator() {
-        try {
-            // Get location of empty CPN template
-            File file = new File(emptyTemplatePath);
-            InputStream inputStream = new FileInputStream(file.getAbsolutePath());
-
-            loadCPNTemplate(inputStream);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        // Get location of empty CPN template
+        InputStream inputStream = getClass().getResourceAsStream(emptyTemplateName);
+        loadCPNTemplate(inputStream);
 
     }
 
@@ -38,6 +36,17 @@ public class XMLCreator {
             // Load Document from ImputStream
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            docBuilder.setEntityResolver(new EntityResolver() {
+                @Override
+                public InputSource resolveEntity(String publicId, String systemId) throws SAXException, IOException {
+                    if (systemId.contains("cpn.dtd")){
+                        InputStream dtdStream = XMLCreator.class.getResourceAsStream(dtdFile);
+                        return new InputSource(dtdStream);
+                    }else {
+                        return null;
+                    }
+                }
+            });
 
             // Supply CPNParserWith Epmpy CPN template
             cpnParser = new CPNParser(docBuilder.parse(inputStream));
