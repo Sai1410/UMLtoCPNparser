@@ -42,7 +42,7 @@ public class MainController {
 
 
     @FXML protected void handleUMLChoose(ActionEvent event){
-        /*FileChooser fileChooser = new FileChooser();
+        FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open UML file");
         
         // Set extension filter
@@ -58,16 +58,16 @@ public class MainController {
             loadUML();
             checkState();
         }
-        */
+        /*
         umlPath = "C:/Users/PSidor/Documents/StudioProjektowe_WS/umlparser/state_machine/State_machine.uml";
         umlPathText.setText(umlPath);
         loadUML();
-        checkState();
+        checkState();*/
 
     }
 
     @FXML protected void handleOutputChoose(ActionEvent event){
-/*        DirectoryChooser directoryChooser = new DirectoryChooser();
+        DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Output directory");
         File file = directoryChooser.showDialog(stage);
         if (file != null) {
@@ -75,10 +75,10 @@ public class MainController {
             outputPathText.setText(outputPath);
             checkState();
         }
-        */
+        /*
         outputPath = "C:/Users/PSidor/Documents/StudioProjektowe_WS/umlparser/state_machine/";
         outputPathText.setText(umlPath);
-        checkState();
+        checkState();*/
     
     }
 
