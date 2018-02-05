@@ -12,6 +12,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import parser.CPN.XMLCreator;
 import parser.Entities.ClassType;
+import parser.Entities.StateMachineType;
 import parser.UML.UMLReader;
 import parser.UML.ValueExtractor;
 import parser.Utils.ResultType;
@@ -30,6 +31,7 @@ public class MainController {
     @FXML private Text outputPathText;
 
     private List<ClassType> classList = new ArrayList<>();
+    private List<StateMachineType> stateMachineList = new ArrayList<>();
     private XMLCreator creator = new XMLCreator();
     private ResultType resultType;
 
@@ -40,9 +42,9 @@ public class MainController {
 
 
     @FXML protected void handleUMLChoose(ActionEvent event){
-        FileChooser fileChooser = new FileChooser();
+        /*FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open UML file");
-
+        
         // Set extension filter
         FileChooser.ExtensionFilter extFilter =
                 new FileChooser.ExtensionFilter("UML files (*.uml)", "*.uml");
@@ -56,10 +58,16 @@ public class MainController {
             loadUML();
             checkState();
         }
+        */
+        umlPath = "C:/Users/PSidor/Documents/StudioProjektowe_WS/umlparser/state_machine/State_machine.uml";
+        umlPathText.setText(umlPath);
+        loadUML();
+        checkState();
+
     }
 
     @FXML protected void handleOutputChoose(ActionEvent event){
-        DirectoryChooser directoryChooser = new DirectoryChooser();
+/*        DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("Output directory");
         File file = directoryChooser.showDialog(stage);
         if (file != null) {
@@ -67,6 +75,11 @@ public class MainController {
             outputPathText.setText(outputPath);
             checkState();
         }
+        */
+        outputPath = "C:/Users/PSidor/Documents/StudioProjektowe_WS/umlparser/state_machine/";
+        outputPathText.setText(umlPath);
+        checkState();
+    
     }
 
     private void checkState() {
@@ -89,7 +102,8 @@ public class MainController {
             alert.setContentText("UML filer or output directory not specified");
             alert.showAndWait();
         } else {
-            creator.injectUMLData(classList);
+        	
+            creator.injectUMLData(classList, stateMachineList);
             creator.saveXML(outputPath, ValueExtractor.extractFileName(umlPath));
             changeResultType(new ResultType(ResultType.Type.GENERATED));
         }
@@ -98,6 +112,7 @@ public class MainController {
     private void loadUML(){
         UMLReader reader = new UMLReader(umlPath);
         classList = reader.getClassList();
+        stateMachineList = reader.getStateMachineList();
     }
 
     private void changeResultType(ResultType type){

@@ -5,6 +5,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import parser.Entities.ClassType;
 import parser.Entities.PropertyType;
+import parser.Entities.SubvertexType;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,6 +24,11 @@ public class ColorCreator {
         return  colorCreator.getPrerequisitesColors();
     }
 
+    public static List<Element> colorPrerequisites(SubvertexType subvertexType, Document document){
+        ColorCreator colorCreator = new ColorCreator(subvertexType, document, true);
+        return  colorCreator.getPrerequisitesColors();
+    }
+    
     private List<Element> getPrerequisitesColors(){
         return prerequisitesColors;
     }
@@ -41,12 +47,23 @@ public class ColorCreator {
         }
     }
 
+    private ColorCreator(SubvertexType subvertexType, Document document, boolean prerequisites){
+        if(prerequisites){
+            createPrerequisitesColors(subvertexType, document);
+        }
+    }
+    
     private void createPrerequisitesColors(ClassType classType, Document document){
         for (PropertyType propertyType: classType.getPropertyList()) {
             prerequisitesColors.add(createSinglePrerequisite(propertyType, document));
         }
     }
 
+    private void createPrerequisitesColors(SubvertexType subvertexType, Document document){
+    	
+    	
+    }
+    
     private Element createSinglePrerequisite(PropertyType propertyType, Document document){
         return createColor(document,
                 IdCreator.getInstance().getNewId(),

@@ -3,6 +3,8 @@ package parser.CPN.CPNCreators;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import parser.Entities.OperationType;
+import parser.Entities.StateType;
+import parser.Entities.TransitionType;
 
 
 public class TransCreator extends CPNCreator {
@@ -19,11 +21,41 @@ public class TransCreator extends CPNCreator {
         this.transition = createTransition(operationType, document);
     }
 
+    private TransCreator(TransitionType transitionType, Document document) {
+        this.transPositions = PositionPicker.getInstance().getNewTransPositions();
+        this.transition = createTransition(transitionType, document);
+    }
+    
+    private TransCreator(StateType stateType, Document document) {
+        this.transPositions = PositionPicker.getInstance().getNewTransPositions();
+        this.transition = createTransition(stateType, document);
+    }    
+ 
+    private TransCreator(String name, Document document) {
+        this.transPositions = PositionPicker.getInstance().getNewTransPositions();
+        this.transition = createTransition(name, document);
+    }    
+    
     public static Element createTransitionFromOperation(OperationType operationType, Document document) {
         TransCreator transCreator = new TransCreator(operationType, document);
         return transCreator.getTransition();
     }
 
+    public static Element createTransitionFromTransition(TransitionType transitionType, Document document) {
+        TransCreator transCreator = new TransCreator(transitionType, document);
+        return transCreator.getTransition();
+    }
+    
+    public static Element createTransitionFromState(StateType stateType, Document document) {
+        TransCreator transCreator = new TransCreator(stateType, document);
+        return transCreator.getTransition();
+    }
+    
+    public static Element createTransitionForInputOutput(String name, Document document) {
+        TransCreator transCreator = new TransCreator(name, document);
+        return transCreator.getTransition();
+    }
+    
     public Element getTransition() {
         return transition;
     }
@@ -35,7 +67,49 @@ public class TransCreator extends CPNCreator {
 
         trans = addBasicFields(trans, document, new AttributeType(AttributeType.Types.TRANS, transPositions), operationType.getName());
 
-        Element box = document.createElement("box");
+        this.setBasicAttributes(document, trans);
+
+        return trans;
+    }
+
+    private Element createTransition(TransitionType transitionType, Document document) {
+        Element trans = document.createElement(TRANS_TAG);
+        trans.setAttribute("id", IdCreator.getInstance().getNewId());
+        trans.setAttribute("explicit", "false");
+
+        trans = addBasicFields(trans, document, new AttributeType(AttributeType.Types.TRANS, transPositions), transitionType.getName());
+
+        this.setBasicAttributes(document, trans);
+        
+        return trans;
+    }
+
+    private Element createTransition(StateType stateType, Document document) {
+        Element trans = document.createElement(TRANS_TAG);
+        trans.setAttribute("id", IdCreator.getInstance().getNewId());
+        trans.setAttribute("explicit", "false");
+
+        trans = addBasicFields(trans, document, new AttributeType(AttributeType.Types.TRANS, transPositions), stateType.getName());
+
+        this.setBasicAttributes(document, trans);
+        
+        return trans;
+    }
+  
+    private Element createTransition(String name, Document document) {
+        Element trans = document.createElement(TRANS_TAG);
+        trans.setAttribute("id", IdCreator.getInstance().getNewId());
+        trans.setAttribute("explicit", "false");
+
+        trans = addBasicFields(trans, document, new AttributeType(AttributeType.Types.TRANS, transPositions), name);
+
+        this.setBasicAttributes(document, trans);
+        
+        return trans;
+    }
+    
+    private void setBasicAttributes (Document document, Element trans) {
+    	Element box = document.createElement("box");
         box.setAttribute("w", "60.000000");
         box.setAttribute("h", "40.000000");
         trans.appendChild(box);
@@ -64,9 +138,6 @@ public class TransCreator extends CPNCreator {
         priority.setAttribute("id", IdCreator.getInstance().getNewId());
         priority = addBasicFields(priority, document, new AttributeType(AttributeType.Types.PRIORITY, transPositions), null);
         trans.appendChild(priority);
-
-        return trans;
     }
-
 
 }

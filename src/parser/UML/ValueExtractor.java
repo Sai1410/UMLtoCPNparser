@@ -14,6 +14,10 @@ public class ValueExtractor {
         return objectName;
     }
 
+    public static String getType(Object object) {
+        String objectName = object.getClass().getSimpleName().toString();
+        return objectName;
+    }
 
     private static String loosePrefix(String string) {
         if (string.contains(prefixSeparator)){

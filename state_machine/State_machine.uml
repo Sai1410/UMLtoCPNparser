@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_xzE0gPsiEeet4uq1OaFxuw" name="State_machine">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_x9OPAPsiEeet4uq1OaFxuw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_7msDoPsiEeet4uq1OaFxuw" name="StateMachine1">
+    <region xmi:type="uml:Region" xmi:id="_8FKvYPsiEeet4uq1OaFxuw" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_mAi54AmBEeiCFtR4Nv0ZHA" name="Trans1" source="_8qg4IPsiEeet4uq1OaFxuw" target="_5q7HoAoiEeiuuqFePlcUhg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_IAkEkAowEeiuuqFePlcUhg" name="Trans3" source="_5q7HoAoiEeiuuqFePlcUhg" target="_Ct5gwAEfEeiG_Ymvf7uI1Q"/>
+      <transition xmi:type="uml:Transition" xmi:id="_-0oqEAo7EeiuuqFePlcUhg" name="Trans4" source="_BhPWgPsjEeet4uq1OaFxuw" target="_9RuCEPsiEeet4uq1OaFxuw"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_8qg4IPsiEeet4uq1OaFxuw" name="Initial1"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_9RuCEPsiEeet4uq1OaFxuw" name="FinalState1"/>
+      <subvertex xmi:type="uml:State" xmi:id="_BhPWgPsjEeet4uq1OaFxuw" name="State1">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_5q7HoAoiEeiuuqFePlcUhg" name="EntryPoint1" kind="entryPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_CRmmUAEfEeiG_Ymvf7uI1Q" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_iPrsgAEfEeiG_Ymvf7uI1Q" name="Trans2" source="_Ct5gwAEfEeiG_Ymvf7uI1Q" target="_Dvij8AEfEeiG_Ymvf7uI1Q"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Ct5gwAEfEeiG_Ymvf7uI1Q" name="State1">
+            <region xmi:type="uml:Region" xmi:id="_Hf79AAneEeiuuqFePlcUhg" name="Region1"/>
+          </subvertex>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_Dvij8AEfEeiG_Ymvf7uI1Q" name="FinalState1" visibility="package"/>
+        </region>
+      </subvertex>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_RP-0sAEgEeiG_Ymvf7uI1Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RQCfEAEgEeiG_Ymvf7uI1Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

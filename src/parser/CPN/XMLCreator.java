@@ -4,6 +4,7 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import parser.Entities.ClassType;
+import parser.Entities.StateMachineType;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -56,8 +57,8 @@ public class XMLCreator {
 
     }
 
-    public void injectUMLData(List<ClassType> classTypeList){
-        cpnParser.addDataToDocument(classTypeList);
+    public void injectUMLData(List<ClassType> classTypeList, List<StateMachineType> stateMachineList){
+        cpnParser.addDataToDocument(classTypeList, stateMachineList);
     }
 
     public void saveXML(String outputFilePath, String fileName){
@@ -73,15 +74,13 @@ public class XMLCreator {
             DOMSource source = new DOMSource(cpnParser.getParsedDocument());
 
             //Create new File and specify it as output stream
-            StreamResult result = new StreamResult(new File(outputFilePath+"/"+ fileName+".cpn"));
-
+            StreamResult result = new StreamResult(new File(outputFilePath + "/" + fileName + ".cpn"));
+            
             //Write to file
             transformer.transform(source, result);
 
         } catch (TransformerException e) {
             e.printStackTrace();
         }
-
-
     }
 }
