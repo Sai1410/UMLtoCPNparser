@@ -127,6 +127,8 @@ public class CPNParser {
 	                page.appendChild(arc_source);
 	                Element arc_target = ArcCreator.createArcTransitionToTarget(placeList, "output" + stateType.getName(), transition, document);
 	                page.appendChild(arc_target);  				
+	                
+	                // Add State's subpage
 	                addStates(stateType, page, cpnnet, instance_list, transition, placeList, null);
 	                
 	            	// Create Transitions for  Connection Points
@@ -169,12 +171,26 @@ public class CPNParser {
     }
 
     public void addStates(StateType stateType, Element page, Element cpnnet, NodeList instanceList, Element transition, List<Element> placeList, String transID) {
-    	Element instance_append = null;
-    	NodeList instancelist_inside = null;
-		// For every state Create Page
+		
+    	// For every state Create Page
 		Element subpage = PageCreator.pageFromName( stateType.getName(), document);
 		
-		// Add instances of Page
+		// add Instance of new Page
+		NodeList instancelist_inside = addInstances(instanceList, transition, page, transID);
+		
+		// Add places, transitions and next states to state
+		addObjectsToSubpage(subpage, stateType, cpnnet, transition, instancelist_inside, placeList);
+		
+		// Add whole page to cpn net
+		cpnnet.appendChild(subpage);
+
+    }
+
+    public NodeList addInstances(NodeList instanceList, Element transition, Element page, String transID) {
+    	Element instance_append = null;
+    	NodeList instancelist_inside = null;
+    	
+		// ADD INSTANCES OF STATE
 		for(int i = 0; i< instanceList.getLength(); i++) {
 			Element instance = (Element)instanceList.item(i);
 			if(instance.getAttribute("page").equals(page.getAttribute("id")) || instance.getAttribute("trans").equals(transID)) {
@@ -187,7 +203,7 @@ public class CPNParser {
 			}
 		}
 		
-		// Add CPN Sheet
+		// ADD CPN SHEET OF INSTANCE
 		Element sheets = (Element)document.getElementsByTagName("sheets").item(0);
 		
 		Element cpnsheet = document.createElement("cpnsheet");
@@ -206,8 +222,34 @@ public class CPNParser {
 		
 		sheets.appendChild(cpnsheet);
 		
-		// Inside page put logic
+		return instancelist_inside;
+    }
+
+    public Element addSubstToTransition (Element subpage, List<Element> placeList, StateType stateType, Element input_place, Element output_place) {
+		
+		Element subst = document.createElement("subst");
+		String input_id_from_page = "";
+		String output_id_from_page = "";
+		String portSock;
+		subst.setAttribute("subpage", subpage.getAttribute("id"));
+    	for(Element place: placeList) {
+    		if(place.getAttribute("name").equals("input" + stateType.getName())) {
+    			input_id_from_page = place.getAttribute("id");
+    		}
+    		if(place.getAttribute("name").equals("output" + stateType.getName())) {
+    			output_id_from_page = place.getAttribute("id");
+    		}
+    	}
+    	portSock = "(" + input_place.getAttribute("id") + "," + input_id_from_page + ")(" + output_place.getAttribute("id")  + "," + output_id_from_page + ")" ;
+		subst.setAttribute("portsock", portSock);
+		return subst;
+    }
+
+    public void addObjectsToSubpage(Element subpage, StateType stateType, Element cpnnet, Element transition, NodeList instancelist_inside, List<Element> placeList) {
+    	
     	List<Element> placeList_inside = new ArrayList<>();
+    
+    	/** ADD PLACES **/
     	
     	// Add inputPlaces and outputPlaces
 		Element input_place = PlaceCreator.placeForInputOutput("input", document);
@@ -235,8 +277,11 @@ public class CPNParser {
 		subpage.appendChild(input_place);
 		subpage.appendChild(output_place);
 		
+    	// add subst tag to parent state to mark inputs and output places
+		transition.appendChild(addSubstToTransition(subpage, placeList, stateType, input_place, output_place));
+		
     	for (RegionType regionType: stateType.getRegionList()) {
-    		// Add Places
+    		
     		for(SubvertexType subvertexType: regionType.getSubvertexList()) {
     			if(subvertexType.getType().equals("StateImpl")) {
     				// Add inputs and outputs for states
@@ -267,6 +312,7 @@ public class CPNParser {
     			}
     		}
     	}
+    	
     	// Add connectionPoints as places
         for (ConnectionPointType connectionType: stateType.getConnectionPointList()) {
         	if(connectionType.getKind() == "entryPoint" || connectionType.getKind() == "exitPoint") {
@@ -279,8 +325,8 @@ public class CPNParser {
             	subpage.appendChild(place);
         	}
         }
-    	
-    	// Add transitions
+        
+        /** ADD TRANSITIONS **/
         // Add Transition from Transition
     	for (RegionType regionType: stateType.getRegionList()) {
             for (TransitionType transitionType: regionType.getTransitionList()) {
@@ -389,28 +435,6 @@ public class CPNParser {
             Element arc_target = ArcCreator.createArcTransitionToTarget(placeList_inside, "output" , transition_for_empty_state, document);
             subpage.appendChild(arc_target);
     	}
-    	
-		// AddSubpage
-		Element subst = document.createElement("subst");
-		String input_id_from_page = "";
-		String output_id_from_page = "";
-		String portSock;
-		subst.setAttribute("subpage", subpage.getAttribute("id"));
-    	for(Element place: placeList) {
-    		if(place.getAttribute("name").equals("input" + stateType.getName())) {
-    			input_id_from_page = place.getAttribute("id");
-    		}
-    		if(place.getAttribute("name").equals("output" + stateType.getName())) {
-    			output_id_from_page = place.getAttribute("id");
-    		}
-    	}
-    	portSock = "(" + input_place.getAttribute("id") + "," + input_id_from_page + ")(" + output_place.getAttribute("id")  + "," + output_id_from_page + ")" ;
-		subst.setAttribute("portsock", portSock);
-
-		transition.appendChild(subst);
-		
-		// Add page to cpn net
-		cpnnet.appendChild(subpage);
-
     }
+    
 }
